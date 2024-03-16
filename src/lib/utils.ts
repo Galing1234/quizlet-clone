@@ -12,7 +12,7 @@ export function findSetById(id: string, learningSet: Array<LearningSetType>) {
 
 export async function getSets() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/`, { next: { revalidate: 1 } }) ;
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/`, { mode: 'no-cors', next: { revalidate: 1 } }) ;
     const data = await res.json() ;
 
     return data.sets ;

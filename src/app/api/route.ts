@@ -10,7 +10,11 @@ export async function GET() {
   try {
     const sets = await Set.find({}) ;
 
-    return NextResponse.json({ sets }) ;
+    return NextResponse.json({ sets, headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    }, }) ;
   } catch (err: any) {
     return NextResponse.json({ error: err.message }) ;
   }
