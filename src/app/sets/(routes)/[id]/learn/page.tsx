@@ -21,12 +21,12 @@ const LearningPage = ({ params }: { params: { id: string } }) => {
       const randomNumber1 = getRandomWords(set.words, [set.words[currentPage - 1].translation]) ;
       const randomNumber2 = getRandomWords(set.words, [
         set.words[currentPage - 1].translation,
-        set.words[randomNumber1]?.translation
+        set.words[randomNumber1].translation
       ]) ;
       const randomNumber3 = getRandomWords(set.words, [
         set.words[currentPage - 1].translation,
-        set.words[randomNumber1]?.translation,
-        set.words[randomNumber2]?.translation,
+        set.words[randomNumber1].translation,
+        set.words[randomNumber2].translation,
       ]) ;
       
       setRandomNumbers(shuffle([randomNumber1, randomNumber2, randomNumber3, currentPage - 1])) ;
@@ -34,7 +34,7 @@ const LearningPage = ({ params }: { params: { id: string } }) => {
   }, [set, currentPage]) ;
 
   if (set) {
-    if (set?.words.length < 4) return <h2>You need to have at least 4 words in your set to start a learn.</h2> ;
+    if (set.words.length < 4) return <h2>You need to have at least 4 words in your set to start a learn.</h2> ;
 
     const randomWords = randomNumbers.map(number => set.words[number].translation) ;
 

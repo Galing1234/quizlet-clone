@@ -44,7 +44,7 @@ const CreateSet = () => {
   }
 
   async function handleFinalSubmit(e: React.MouseEvent<HTMLButtonElement>) {
-    const res = await fetch('http://localhost:3000/api/', {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/`, {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
