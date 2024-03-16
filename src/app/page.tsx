@@ -4,7 +4,7 @@ import { getSets } from "@/lib/utils" ;
 import { LearningSetType } from "@/types/types" ;
 
 const HomePage = async () => {
-  const sets = await getSets() ;
+  const sets = await getSets() || [] ;
   const setsCorrected = sets.reverse() ;
   const learningSetsTSX = setsCorrected.map((set: LearningSetType) => {
     return (
