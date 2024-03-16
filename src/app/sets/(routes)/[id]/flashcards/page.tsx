@@ -5,7 +5,6 @@ import { findSetById } from "@/lib/utils" ;
 import FlashCard from "@/components/Practice/FlashCard/FlashCard" ;
 import { LearningSetType } from "@/types/types" ;
 import LastNext from "@/components/Practice/FlashCard/LastNext" ;
-import { LearningSets } from "@/data/data" ;
 
 const Flashcards = ({ params }: { params: { id: string } }) => {
   const [learningSets, setLearningSets] = useState<Array<LearningSetType>>([]) ;
