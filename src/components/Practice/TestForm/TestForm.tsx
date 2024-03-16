@@ -1,5 +1,4 @@
 import { useState } from "react" ;
-import { WordType } from "@/types/types" ;
 
 interface Props {
   translation: string ;
