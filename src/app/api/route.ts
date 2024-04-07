@@ -11,8 +11,8 @@ export async function GET() {
     const sets = await Set.find({}) ;
 
     return NextResponse.json({ sets, headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Origin': 'https://quizlet-clone-but-better.vercel.app/',
+      'Access-Control-Allow-Methods': 'GET, POST',
       'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     }, }) ;
   } catch (err: any) {
