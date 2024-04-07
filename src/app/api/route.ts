@@ -12,8 +12,8 @@ export async function GET() {
 
     return NextResponse.json({ sets, headers: {
       'Access-Control-Allow-Origin': 'https://quizlet-clone-but-better.vercel.app/',
-      'Access-Control-Allow-Methods': 'GET, POST',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      'Access-Control-Allow-Methods': '',
+      'Access-Control-Allow-Headers': '',
     }, }) ;
   } catch (err: any) {
     return NextResponse.json({ error: err.message }) ;
