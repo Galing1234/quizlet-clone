@@ -10,11 +10,7 @@ export async function GET() {
   try {
     const sets = await Set.find({}) ;
 
-    return NextResponse.json({ sets, headers: {
-      'Access-Control-Allow-Origin': 'https://quizlet-clone-but-better.vercel.app/',
-      'Access-Control-Allow-Methods': '',
-      'Access-Control-Allow-Headers': '',
-    }, }) ;
+    return NextResponse.json({ sets }) ;
   } catch (err: any) {
     return NextResponse.json({ error: err.message }) ;
   }
